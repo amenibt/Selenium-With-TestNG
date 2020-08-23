@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite_TODOS">
-              <span class="suite-name border-passed">Suite TODOS</span>
+              <span class="suite-name border-failed">Suite TODOS</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite_TODOS" class="hide-methods passed suite-Suite_TODOS"> (hide)</a> <!-- hide-methods passed suite-Suite_TODOS -->
-                      <a href="#" panel-name="suite-Suite_TODOS" class="show-methods passed suite-Suite_TODOS"> (show)</a> <!-- show-methods passed suite-Suite_TODOS -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite_TODOS" class="hide-methods failed suite-Suite_TODOS"> (hide)</a> <!-- hide-methods failed suite-Suite_TODOS -->
+                      <a href="#" panel-name="suite-Suite_TODOS" class="show-methods failed suite-Suite_TODOS"> (show)</a> <!-- show-methods failed suite-Suite_TODOS -->
                     </span>
-                    <div class="method-list-content passed suite-Suite_TODOS">
+                    <div class="method-list-content failed suite-Suite_TODOS">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_TODOS" title="com.todos.tests.AddTodoTest" hash-for-method="iCanAddTodo">iCanAddTodo</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_TODOS" title="com.todos.tests.RemoveTodoTest" hash-for-method="iCanRemoveTodo">iCanRemoveTodo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite_TODOS -->
+                    </div> <!-- method-list-content failed suite-Suite_TODOS -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,21 +116,50 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite_TODOS" class="panel Suite_TODOS">
-          <div class="suite-Suite_TODOS-class-passed">
+          <div class="suite-Suite_TODOS-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.todos.tests.AddTodoTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.todos.tests.RemoveTodoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="iCanAddTodo">
-                  </a> <!-- iCanAddTodo -->
-                  <span class="method-name">iCanAddTodo</span>
+                  <a name="iCanRemoveTodo">
+                  </a> <!-- iCanRemoveTodo -->
+                  <span class="method-name">iCanRemoveTodo</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@CLASS=&apos;clear-completed&apos;]&quot;}
+  (Session info: chrome=84.0.4147.135)
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 73 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;DESKTOP-UE9EIAU&apos;, ip: &apos;192.168.1.14&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:56248}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Users\AmeniBT\AppData\Local\Temp\scoped_dir792_1172229476}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.135, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: b3fc29500c1f8016b6f95052dd12e9ae
+*** Element info: {Using=xpath, value=//button[@CLASS=&apos;clear-completed&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:102)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:185)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.todos.utils.BasePage.click(BasePage.java:46)
+	at com.todos.pages.TodoPage.removeElement(TodoPage.java:60)
+	at com.todos.tests.RemoveTodoTest.iCanRemoveTodo(RemoveTodoTest.java:26)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite_TODOS-class-passed -->
+          </div> <!-- suite-Suite_TODOS-class-failed -->
         </div> <!-- panel Suite_TODOS -->
         <div panel-name="test-xml-Suite_TODOS" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -144,7 +173,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.todos.tests.AddTodoTest&quot;/&gt;
+      &lt;class name=&quot;com.todos.tests.RemoveTodoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite TODOS --&gt;
@@ -186,14 +215,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'iCanAddTodo')
-data.setCell(0, 2, 'com.todos.tests.AddTodoTest')
-data.setCell(0, 3, 203);
+data.setCell(0, 1, 'iCanRemoveTodo')
+data.setCell(0, 2, 'com.todos.tests.RemoveTodoTest')
+data.setCell(0, 3, 351);
 window.suiteTableData['Suite_TODOS']= { tableData: data, tableDiv: 'times-div-Suite_TODOS'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 203 ms</span>
+              <span class="suite-total-time">Total running time: 351 ms</span>
               <div id="times-div-Suite_TODOS">
               </div> <!-- times-div-Suite_TODOS -->
             </div> <!-- times-div -->
@@ -219,18 +248,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.todos.tests.AddTodoTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.todos.tests.RemoveTodoTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">iCanAddTodo</span>
-                <span class="method-start">40279 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">iCanRemoveTodo</span>
+                <span class="method-start">32878 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanTest</span>
-                <span class="method-start">40483 ms</span>
+                <span class="method-start">33244 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
